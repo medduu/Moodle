@@ -1,1 +1,66 @@
+kuha = float(input("Enter the length of the zander in centimeters: "))
+
+if kuha < 42.0:
+    puuttuvat_sentit = 42.0 - kuha
+    print("The zander does not meet the size limit.")
+    print("Please release the fish back into the lake.")
+    print(f"The fish was {puuttuvat_sentit:.1f} centimeters below the size limit.")
+else:
+    print ("The zander meets the size limit.")
+
+
+cabin= input("Enter the cabin class (LUX, A, B, or C): ")
+LUX = "Upper-deck cabin with a balcony"
+A = "A cabin above the car deck with a window."
+B = "Windowless cabin above the car deck."
+C = "Windowless cabin below the car deck."
+
+if cabin == "LUX":
+    print("Upper-deck cabin with a balcony.")
+
+elif cabin == "A":
+    print("A cabin above the car deck.")
+elif cabin == "B":
+    print("Windowless cabin above the car deck.")
+elif cabin == "C":
+    print("Windowless cabin below the car deck.")
+
+else:
+    print("Invalid cabin class.")
+
+
+gender = input("Enter biological gender (male/female): ").strip().lower()
+try:
+    hemoglobin = float(input("Enter hemoglobin value (g/l): "))
+except ValueError:
+    print("Invalid hemoglobin value.")
+    exit()
+
+if gender == "female":
+    if hemoglobin < 117:
+        print("Your hemoglobin is low.")
+    elif hemoglobin <= 155:
+        print("Your hemoglobin is normal.")
+    else:
+        print("Your hemoglobin is high.")
+elif gender == "male":
+    if hemoglobin < 134:
+        print("Your hemoglobin is low.")
+    elif hemoglobin <= 167:
+        print("Your hemoglobin is normal.")
+    else:
+        print("Your hemoglobin is high.")
+
+
+year = int(input("Enter a year: "))
+
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print(f"{year} is a leap year.")
+else:
+    print(f"{year} is not a leap year.")
+
+
+
+
+
 
