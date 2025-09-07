@@ -1,1 +1,51 @@
+1. 
+import random
 
+n = int(input("How many dice to roll: "))
+
+summa = 0
+
+for i in range(n):
+    silmaluku = random.randint(1, 6)
+    summa += silmaluku
+
+print("Sum of the dice:", summa)
+
+2. 
+numbers = []
+
+while True:
+    entry = input("Enter a number: ")
+    if entry == "":
+        break
+    numbers.append(float(entry))
+
+numbers.sort(reverse=True)
+
+print("The greatest numbers in descending order:")
+for n in numbers[:5]:
+    print(n)
+
+3. 
+n = int(input("Enter an integer: "))
+
+if n > 1:
+    for i in range(2, n):
+        if n % i == 0:
+            print(n, "is not a prime number.")
+            break
+    else:
+        print(n, "is a prime number.")
+else:
+    print(n, "is not a prime number.")
+
+4. 
+cities = []
+
+for i in range(5):
+    city = input("Enter the name of a city: ")
+    cities.append(city)
+
+print("\nThe cities you entered:")
+for city in cities:
+    print(city)
